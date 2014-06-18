@@ -3,9 +3,10 @@
 var program = require('commander');
 var request = require('request');
 var chalk = require('chalk');
-
+var cliff = require('cliff');
 var url = "http://worldcup.sfg.io/matches/today";
 var matchInfo;
+
 
 request({
     method: 'GET',
@@ -28,16 +29,17 @@ program
 
 function program_check() {
     if (program.today) {
+        var rows = [];
+        rows.push(["Home   ".bold, "Score   ".bold, "Away   ".bold, "Status".bold]);
         for(var i = 0; i < matchInfo.length; i++) {
             var matchObj = matchInfo[i];
             var home_team = matchObj["home_team"];
             var away_team = matchObj["away_team"];
-            console.log( home_team["country"] + "  " + home_team["goals"] + "-" + away_team["goals"] + "  " + away_team["country"] + "  " + matchObj["status"]);
+            var score = home_team["goals"] + " - " + away_team["goals"];
+            rows.push([home_team["country"].toString() + "   ", score.toString() + "   ", away_team["country"].toString() + "   ", matchObj["status"]]);
         }
+        console.log(cliff.stringifyRows(rows));
     } else {
         program.help();
     }
 }
-
-
-

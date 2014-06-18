@@ -1,6 +1,6 @@
 {
   "name": "fifa",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple command-line tool for searching fifa scores",
   "author": "Dhruv Arora",
   "engines": {
@@ -19,5 +19,13 @@
   "scripts": {
     "test": "fifa -t"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhruvarora/fifa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhruvarora/fifa/issues"
+  },
+  "homepage": "https://github.com/dhruvarora/fifa"
 }
