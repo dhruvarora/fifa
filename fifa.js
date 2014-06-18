@@ -23,7 +23,7 @@ request({
 });
 
 program
-    .version('1.0.0')
+    .version('1.1.2')
     .option('-t, --today', "Return today's match scores and timings")
     .parse(process.argv);
 
