@@ -1,0 +1,23 @@
+{
+  "name": "fifa",
+  "version": "1.0.0",
+  "description": "A simple command-line tool for searching fifa scores",
+  "author": "Dhruv Arora",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "chalk": "^0.4.0",
+    "commander": "^2.2.0",
+    "request": "^2.36.0"
+  },
+  "bin": {
+    "fifa": "fifa.js"
+  },
+  "main": "fifa.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "fifa -t"
+  },
+  "license": "ISC"
+}
